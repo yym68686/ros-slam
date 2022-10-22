@@ -1,7 +1,6 @@
 <!-- 
     创建一个机器人模型(盒状即可)，显示在 Gazebo 中 
 -->
-
 <robot name="mycar">
     <link name="base_link">
         <visual>
