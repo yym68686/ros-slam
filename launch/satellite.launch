@@ -1,0 +1,13 @@
+<launch>
+  <arg name="model" default="$(find point)/urdf/satellite.urdf"/>
+  <arg name="gui" default="true" />
+
+  <param name="robot_description" textfile="$(arg model)" />
+  <param name="use_gui" value="$(arg gui)" />
+
+<!--take robot in gazebo-->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+        args="-z 1.0 -unpause -urdf -model robot -param robot_description" respawn="false" output="screen" />
+</launch>
+

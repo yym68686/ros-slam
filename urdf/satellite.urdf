@@ -1,0 +1,47 @@
+<robot name="satellite">
+<!--base_link-->
+     <link name="base_link">
+       <collision>
+            <geometry>
+              <box size="0.00001 0.00001 0.00001"/>
+            </geometry>
+       </collision>
+        <inertial>
+           <mass value="1" />
+           <origin xyz="0 0 0" rpy="0 0 0"/>
+           <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1" />
+         </inertial>
+     </link>
+  <!--satellite-->
+  <joint name="satellite_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="satellite"/>
+  </joint>
+  <link name="satellite">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+       <mesh filename= "package://point/meshes/satellite.stl"/>
+       <scale>0.1 0.1 0.1</scale>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+       <mesh filename= "package://point/meshes/satellite.stl"/>
+      </geometry>
+    </collision> -->
+  </link>
+  <gazebo reference="satellite">
+        <material>Gazebo/Orange</material>    
+  </gazebo>
+</robot>
+    <!-- <visual name='visual'>
+      <geometry>
+        <mesh>
+          <uri>model://point/meshes/satellite.dae</uri>
+          <scale>0.1 0.1 0.1</scale>
+        </mesh>
+      </geometry>
+    </visual> -->
