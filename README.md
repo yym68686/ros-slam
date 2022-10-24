@@ -26,6 +26,12 @@ cd ~/catkin_ws
 catkin_make
 ```
 
+让 ROS 找到软件包
+
+```bash
+source ~/catkin_ws/devel/setup.bash
+```
+
 结合 URDF 打开 gazebo 仿真环境
 
 ```bash
