@@ -209,4 +209,17 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(hello src/hello.cpp)
+# add_executable(hello src/hello.cpp)
+
+find_package(PCL 1.2 REQUIRED)
+
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+# add_executable (pcd_write src/test_pcl.cpp)
+add_executable (pcd_write src/pcl_write.cpp)
+target_link_libraries(pcd_write
+  ${catkin_LIBRARIES}
+)
+target_link_libraries (pcd_write ${PCL_LIBRARIES})
