@@ -221,5 +221,5 @@ add_definitions(${PCL_DEFINITIONS})
 add_executable (pcd_write src/pcl_write.cpp)
 target_link_libraries(pcd_write
   ${catkin_LIBRARIES}
+  ${PCL_LIBRARIES}
 )
-target_link_libraries (pcd_write ${PCL_LIBRARIES})
