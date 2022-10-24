@@ -1,6 +1,6 @@
 ## 简介
 
-使用 urdf 文件构建仿真机器人，在 gazebo 搭建仿真环境，导入人造卫星的 stl 文件，利用仿真 kinect 深度相机获取人造卫星的点云数据并在 RVIZ 中可视化，将 ros-slamCloud2 数据类型转化为 pcd 文件。
+使用 urdf 文件构建仿真机器人，在 gazebo 搭建仿真环境，导入人造卫星的 stl 文件，利用仿真 kinect 深度相机获取人造卫星的点云数据并在 RVIZ 中可视化，将 PointCloud2 数据类型转化为 pcd 文件。
 
 ## 使用指南
 
