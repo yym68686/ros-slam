@@ -32,6 +32,12 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
 
+启动 ROS 内核
+
+```
+roscore
+```
+
 结合 URDF 打开 gazebo 仿真环境
 
 ```bash
