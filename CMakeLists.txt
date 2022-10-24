@@ -223,3 +223,9 @@ target_link_libraries(pcd_write
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
 )
+
+add_executable(vel_node src/vel_node.cpp)
+add_dependencies(vel_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(vel_node
+  ${catkin_LIBRARIES}
+)

@@ -22,7 +22,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-       <mesh filename= "package://point/meshes/satellite.stl"/>
+       <mesh filename= "package://point/meshes/satellite0.01.stl"/>
        <scale>0.1 0.1 0.1</scale>
       </geometry>
     </visual>
