@@ -1,6 +1,6 @@
 ## 简介
 
-使用 urdf 文件构建仿真机器人，在 gazebo 搭建仿真环境，导入人造卫星的 stl 文件，利用仿真 kinect 深度相机获取人造卫星的点云数据并在 RVIZ 中可视化，将 PointCloud2 数据类型转化为 pcd 文件。
+使用 urdf 文件构建仿真机器人，在 gazebo 搭建仿真环境，导入人造卫星的 stl 文件，利用仿真 kinect 深度相机获取人造卫星的点云数据并在 RVIZ 中可视化，将 ros-slamCloud2 数据类型转化为 pcd 文件。
 
 ## 使用指南
 
@@ -29,13 +29,13 @@ catkin_make
 结合 URDF 打开 gazebo 仿真环境
 
 ```bash
-roslaunch point env.launch
+roslaunch ros-slam env.launch
 ```
 
 打开机器人深度相机 kinect 等传感器并在 rviz 可视化
 
 ```bash
-roslaunch point sensor.launch
+roslaunch ros-slam sensor.launch
 ```
 
 打开机器人运动控制
@@ -53,10 +53,10 @@ sudo apt-get install -y ros-noetic-teleop-twist-keyboard
 订阅 kinect 点云话题转化为点云 pcd 文件
 
 ```
-rosrun point pcd_write
+rosrun ros-slam pcd_write
 ```
 
-在 ~/catkin_ws/src 目录形成 pcd 文件，查看 pcd 点云文件
+上条命令在哪个目录执行，就在哪个目录生成 pcd 文件，查看 pcd 点云文件
 
 ```
 pcl_viewer file.pcd
@@ -78,13 +78,13 @@ cd src
 创建软件包
 
 ```
-catkin_create_pkg point rospy roscpp std_msgs urdf xacro gazebo_ros gazebo_ros_control gazebo_plugins
+catkin_create_pkg ros-slam rospy roscpp std_msgs urdf xacro gazebo_ros gazebo_ros_control gazebo_plugins
 ```
 
-进入 point/src 文件夹创建文件 hello.cpp
+进入 ros-slam/src 文件夹创建文件 hello.cpp
 
 ```
-cd point/src
+cd ros-slam/src
 touch hello.cpp
 ```
 
@@ -122,7 +122,7 @@ source ~/catkin_ws/devel/setup.bash
 运行节点
 
 ```bash
-rosrun point hello
+rosrun ros-slam hello
 ```
 
 运行成功。
@@ -134,8 +134,8 @@ sudo apt-get install -y ros-noetic-teleop-twist-keyboard
 cd ~
 git clone -b kinect https://github.com/yym68686/ROS-Lab.git
 cd ~/catkin_ws/src
-roslaunch point env.launch
-roslaunch point sensor.launch
+roslaunch ros-slam env.launch
+roslaunch ros-slam sensor.launch
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 rostopic pub -r 10 /cmd_vel geometry_msgs/Twist "linear:
   x: 1.0
@@ -172,7 +172,7 @@ catkin_make
 
 
 
-查看当前是否有 camera/depth/points 话题
+查看当前是否有 camera/depth/ros-slams 话题
 
 ```bash
 rostopic list
@@ -184,6 +184,6 @@ rostopic list
 
 ```
 
-点云数据格式：http://docs.ros.org/en/api/sensor_msgs/html/msg/PointCloud2.html
+点云数据格式：http://docs.ros.org/en/api/sensor_msgs/html/msg/ros-slamCloud2.html
 
 ## 

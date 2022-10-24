@@ -22,14 +22,14 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-       <mesh filename= "package://point/meshes/satellite0.01.stl"/>
+       <mesh filename= "package://ros-slam/meshes/satellite0.01.stl"/>
        <scale>0.1 0.1 0.1</scale>
       </geometry>
     </visual>
     <!-- <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-       <mesh filename= "package://point/meshes/satellite.stl"/>
+       <mesh filename= "package://ros-slam/meshes/satellite.stl"/>
       </geometry>
     </collision> -->
   </link>
@@ -40,7 +40,7 @@
     <!-- <visual name='visual'>
       <geometry>
         <mesh>
-          <uri>model://point/meshes/satellite.dae</uri>
+          <uri>model://ros-slam/meshes/satellite.dae</uri>
           <scale>0.1 0.1 0.1</scale>
         </mesh>
       </geometry>

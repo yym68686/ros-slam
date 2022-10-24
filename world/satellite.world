@@ -127,7 +127,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/home/yanyuming/catkin_ws/src/point/meshes/satellite0.01.stl</uri>
+              <uri>../meshes/satellite0.01.stl</uri>
             </mesh>
           </geometry>
           <material>

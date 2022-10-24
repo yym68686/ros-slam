@@ -1,5 +1,5 @@
 <launch>
-  <arg name="model" default="$(find point)/urdf/satellite.urdf"/>
+  <arg name="model" default="$(find ros-slam)/urdf/satellite.urdf"/>
   <arg name="gui" default="true" />
 
   <param name="robot_description" textfile="$(arg model)" />

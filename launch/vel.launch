@@ -1,4 +1,4 @@
 <launch>
-    <node pkg="point" type="vel_node" name="vel_node"/>
-    <node pkg="point" type="pcl_write" name="pcl_write"/>
+    <node pkg="ros-slam" type="vel_node" name="vel_node"/>
+    <node pkg="ros-slam" type="pcl_write" name="pcl_write"/>
 </launch>
